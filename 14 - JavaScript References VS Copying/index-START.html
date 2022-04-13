@@ -12,8 +12,9 @@
     // Let's say we have an array
     const players = ['Wes', 'Sarah', 'Ryan', 'Poppy'];
     const team = players;
-    team[3] = 'Lux';
     const team2 = players.slice();
+    const team3 = [].concat(players);
+    team[3] = 'Lux';
     // and we want to make a copy of it.
 
     // You might think we can just do something like this:
