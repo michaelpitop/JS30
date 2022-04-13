@@ -57,7 +57,14 @@
         if (callNow) func.apply(context, args);
       };
     }
-    
+
+    const sliderImages = document.querySelectorAll('.slide');
+
+    function checkSlide(e) {
+      console.log(e);
+    }
+
+    window.addEventListener('scroll', debounce(checkSlide));
 
   </script>
 
