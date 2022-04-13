@@ -11,10 +11,11 @@
 
     // Let's say we have an array
     const players = ['Wes', 'Sarah', 'Ryan', 'Poppy'];
-    const team = players;
-    const team2 = players.slice();
-    const team3 = [].concat(players);
-    team[3] = 'Lux';
+    // const team = players;
+    // const team2 = players.slice();
+    // const team3 = [].concat(players);
+    // team[3] = 'Lux';
+    const team4 = [...players];
     // and we want to make a copy of it.
 
     // You might think we can just do something like this:
@@ -46,7 +47,8 @@
     };
 
     // and think we make a copy:
-
+    const cap2 = Object.assign({}, person, { number: 31, age: 31})
+    console.log(cap2);
     // how do we take a copy instead?
 
     // We will hopefully soon see the object ...spread
