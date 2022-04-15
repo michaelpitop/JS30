@@ -11,6 +11,9 @@ function getVideo() {
 
       video.srcObject = localMediaStream;
       video.play();
+    })
+    .catch(err => {
+      console.error(`can't access your camera!!!`, err);
     });
 }
 
