@@ -9,14 +9,20 @@ function getVideo() {
     .then(localMediaStream => {
       console.log(localMediaStream);
 
+//  DEPRECIATION :
+//       The following has been depreceated by major browsers as of Chrome and Firefox.
+//       video.src = window.URL.createObjectURL(localMediaStream);
+//       Please refer to these:
+//       Deprecated  - https://developer.mozilla.org/en-US/docs/Web/API/URL/createObjectURL
+//       Newer Syntax - https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/srcObject
+
       video.srcObject = localMediaStream;
       video.play();
     })
     .catch(err => {
-      console.error(`can't access your camera!!!`, err);
+      console.error(`OH NO!!!`, err);
     });
 }
-
 
 function paintToCanvas() {
   const width = video.videoWidth;
@@ -98,7 +104,6 @@ function greenScreen(pixels) {
 
   return pixels;
 }
-
 
 getVideo();
 
