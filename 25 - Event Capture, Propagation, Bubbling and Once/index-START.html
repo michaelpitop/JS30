@@ -45,7 +45,7 @@
   const divs = document.querySelectorAll('div');
 
   function logText(e) {
-    e.stopPropagation(); // stop bubbling!
+    // e.stopPropagation(); // stop bubbling!
     console.log(this.classList.value);
   }
 
@@ -53,6 +53,13 @@
     capture: false,
     once: true
   }));
+
+  button.addEventListener('click', () => {
+    console.log('Click!!!');
+  }, {
+    once: true
+  });
+
 
 </script>
 </body>
