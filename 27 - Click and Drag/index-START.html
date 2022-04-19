@@ -47,6 +47,11 @@
     scrollLeft = slider.scrollLeft;
   });
 
+  slider.addEventListener('mouseleave', () => {
+    isDown = false;
+    slider.classList.remove('active');
+  });
+
 
 </script>
 
